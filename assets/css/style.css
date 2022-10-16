@@ -1,0 +1,285 @@
+@import url(reset.css);
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 15px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 15px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 15px;
+    line-height: 1.3em;
+    color: dimgray;
+}
+
+.name {
+    position: absolute;
+    font-size: 40px;
+    margin: 5px;
+    right: 5px;
+    bottom: 5px;
+    color: white;
+}
+
+.logo {
+    height: 28px;
+    width: 28px;
+    margin: 15px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.angeled {
+    height: 0px;
+    overflow:hidden;
+    z-index:-1;
+  }
+  .angeled::before {
+    content:"";
+    position:absolute;
+    z-index:-2;
+    top:-20px;
+    left:-20px;
+    right:0px;
+    bottom:310px;
+    transform-origin:left;
+    transform:skewY(-10deg);
+    background:#19BD9F;
+    box-shadow:0 2px 20px black
+  }
+
+ /* * {
+    border: 1px solid black !important;
+}  */
+
+/* About me section specific styles*/
+
+.about-me{
+    display: flex;
+    margin: 40px 10px 10px 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me > div {
+    flex-grow: 1;
+}
+
+.photo > img{
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 1px 1px 4px black;
+}
+
+.about-me > .photo {
+    width: 40%;
+    margin: 0;
+    max-width: 400px;
+    min-height: 0;
+    height: fit-content;
+    position: relative;
+}
+
+.about-text {
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 4px black;
+    max-width: 600px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text > .heading {
+
+}
+
+.about-text > .text {
+    flex-grow: 1;
+}
+
+.about-text > .logos {
+    text-align: right;
+}
+
+.self-photo {
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0,-50%);
+}
+
+@media (max-width: 600px) {
+    .about-me {
+        flex-direction: column;
+    }
+
+    .about-me > .photo {
+        min-width: 200px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+}
+
+/* My works section specific styles */
+
+.my-works {
+    margin:50px auto;
+    max-width: 1000px;
+}
+
+.my-works-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+    margin: 15px;
+}
+
+.my-works-items > div {
+    box-shadow: 1px 1px 4px black;
+    background-color: white;
+}
+
+.my-works-items > div > .image {
+    background-color: bisque;
+    height: 0;
+    width: 100%;
+    padding-bottom: 75%;
+}
+
+.my-works-items > div > .description {
+    padding: 5px;
+}
+
+.works-title{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.works-title > div {
+    min-width: 102px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.works-title > div > * {
+    display: block;
+    float: left;
+}
+
+.works-title > div > .logo {
+    height: 28px;
+    width: 28px;
+    margin: 10px;
+}
+
+.works-title > h2 {
+    vertical-align: middle;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+@media (max-width: 900px) {
+    .my-works-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .my-works-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .works-title {
+        flex-wrap: wrap;
+    }
+
+    /* .works-title > * {
+        margin: 7.5px 15px;
+    }
+    .works-title > div {
+        margin: 7.5px 15px 7.5px 5px;
+    } */
+}
+
+@media (max-width: 300px) {
+    .works-title {
+        flex-wrap: wrap;
+    }
+}
+
+/* Contact Me section specific styles */
+
+.contact {
+    background-color: #19BD9F;
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 50px auto 0;
+}
+
+.contact-info {
+    flex-grow: 1;
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.contact-info > p {
+    color: black;
+}
+
+.contact-info > h1 {
+    margin: 30px 15px;
+}
+
+.contact-me > .photo {
+    flex-grow: 1;
+    flex-shrink: 2;
+    width: 60%;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.contact-info-email, .contact-info-phone {
+    margin-left: 15px;
+}
+
+.contact-info-phone > * {
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+.contact-info-email > * {
+    vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+    .contact-me {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .contact-info {
+        flex-grow: 1;
+        width: 100%;
+    }
+}
